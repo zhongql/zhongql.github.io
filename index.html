@@ -1,0 +1,49 @@
+---
+layout: default
+title: Zhongql's Blog | 快乐的小70
+---
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>快乐的小70 by zhongql</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <style>
+      pre {
+        width: 400px;
+        margin: 100px auto;
+      } 
+    </style>
+  </head>
+  <body>
+    <div>
+      <pre>
+         ________________
+        < 快乐的小70 >
+         ----------------
+                \   ^__^
+                 \  (oo)\_______
+                    (__)\       )\/\
+                        ||----w |
+                        ||     ||
+       
+      </pre>
+    </div>
+     <div class="col-sm-6 index_list">
+          <ul class="archive">
+              {% for post in site.posts limit:5 %}
+              {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+              <li class="item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" >{{ post.title }}</a >
+              </li>
+              {% endfor %}
+           </ul>
+      </div>
+  </body>
+</html>
